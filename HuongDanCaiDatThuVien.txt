@@ -1,0 +1,20 @@
+Lưu ý : Form được viết ở Visual Studio 2022 ( nếu muốn chạy form phải update bản 2022 mới open form được )
+Hướng dẫn cài đặt thư viện:
+- Resources > App.config ;
+Đổi tên đường dẫn kết nối database phù hợp với máy của bạn:  connectionString="Server=Namesever;Database=SXHoaThucPham;User Id=??;Password=??;" ( ID và Password ở đây dùng là của tài khoản kết nối database của SQL server )
+
++ Server name: Tên máy chủ, ví dụ máy sinh viên thực hiện là "ASUS03\SQLSERVER2016". Tên này có thể bao gồm cả tên máy và tên instance của SQL Server.
++ Authentication: Phương thức xác thực, ở đây là "SQL Server Authentication" (Xác thực bằng SQL Server).
++ Login: Tên đăng nhập, trong ví dụ này là "sa". Đây là tài khoản quản trị viên mặc định của SQL Server và có quyền truy cập đầy đủ vào hệ thống.
++ Password: Mật khẩu của tài khoản "sa". Vì lý do bảo mật, mật khẩu thường được ẩn đi bằng các dấu hoa thị (*).
+
+- Cài thư viện : Data.SqlClient và gắn thư viện vào code
+- File chứa ảnh : Resources
+
+- Cài Framework :
+Nếu dự án cần các thư viện hoặc gói phần mềm bên ngoài, bạn có thể cài đặt chúng thông qua NuGet Package Manager:
+
+Mở Tools > NuGet Package Manager > Manage NuGet Packages for Solution.
+Tìm kiếm và cài đặt các gói cần thiết, ví dụ như Microsoft.EntityFrameworkCore  :
+
+' Install-Package Microsoft.EntityFrameworkCore '
